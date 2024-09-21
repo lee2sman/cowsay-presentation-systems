@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+set works (cat ./sources/works.txt)
+
+set count 1
+for work in $works
+  echo $count. $work
+  set count (math $count + 1)
+end

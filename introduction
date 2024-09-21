@@ -1,0 +1,24 @@
+#!/usr/bin/env fish
+
+set intro ./sources/intro.txt
+set bio ./sources/bio.txt
+set why ./sources/why.txt
+
+# slide 1
+set frogs beavis.zen blowfish bong bud-frogs bunny cheese cower daemon default dragon dragon-and-cow elephant elephant-in-snake eyes flaming-sheep ghostbusters head-in hellokitty kiss kitty koala kosh luke-koala meow milk moofasa moose mutilated ren satanic sheep skeleton small stegosaurus stimpy supermilker surgery three-eyes turkey turtle tux udder vader vader-koala www
+set frog (random 1 (count $frogs))
+
+clear
+cowsay -f $frogs[$frog] (cat $intro)
+espeak (cat $intro)
+
+clear
+
+cowsay -f $frogs[$frog] (cat $bio)
+espeak (cat $bio)
+
+clear
+
+cowsay -f $frogs[$frog] (cat $why)
+espeak (cat $why)
+

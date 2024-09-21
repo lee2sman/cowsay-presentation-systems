@@ -1,0 +1,18 @@
+#!/usr/bin/env fish
+
+set thanks ./sources/thanks.txt
+set contact ./sources/contact.txt
+
+set frogs beavis.zen blowfish bong bud-frogs bunny cheese cower daemon default dragon dragon-and-cow elephant elephant-in-snake eyes flaming-sheep ghostbusters head-in hellokitty kiss kitty koala kosh luke-koala meow milk moofasa moose mutilated ren satanic sheep skeleton small stegosaurus stimpy supermilker surgery three-eyes turkey turtle tux udder vader vader-koala www
+set frog (random 1 (count $frogs))
+
+clear
+cowsay -f $frogs[$frog] (cat $thanks)
+espeak (cat $thanks)
+
+clear
+
+cowsay -f $frogs[$frog] (cat $contact)
+espeak (cat $contact)
+
+figlet "Thanks!"
